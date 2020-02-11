@@ -4,8 +4,8 @@ import TodoForm from "./components/TodoComponents/TodoForm";
 import uuid from "uuid";
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       todoList: [
         {

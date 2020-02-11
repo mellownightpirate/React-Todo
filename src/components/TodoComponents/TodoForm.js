@@ -1,18 +1,23 @@
 import React from 'react';
-const TodoForm = props => {
-  return (
-    <form>
+
+class TodoForm extends React.Component {
+  render() {
+    return (
+<form>
       <input
-        onChange={props.todoChangeHandler}
+        onChange={this.props.todoChangeHandler}
         type="text"
         name="todo"
-        value={props.value}
+        value={this.props.value}
         placeholder="Write your todo's here..."
       />
-      <button onClick={props.addTodoHandler}>Add Todo</button>
-      <button onClick={props.clearTodoListHandler}>Clear Completed</button>
+      <button onClick={this.props.addTodoHandler}>Add Todo</button>
+      <button onClick={this.props.clearTodoListHandler}>Clear Completed</button>
     </form>
-  );
+    )
+    
+  }
+
 };
 
 export default TodoForm;
